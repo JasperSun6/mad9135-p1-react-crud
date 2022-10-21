@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../../context/GlobalState";
 import SongForm from "../../components/SongForm/SongForm";
+import "./SongItem.css";
 import { ListGroupItem, Button, Container } from "reactstrap";
 
 const SongItem = ({ song }) => {
@@ -14,10 +15,15 @@ const SongItem = ({ song }) => {
 
       <ListGroupItem className="list" key={song.id}>
         <div>
-          <p className="songName">{song.name}</p>
+          <p className="songName">
+            {song.name.charAt(0).toUpperCase() + song.name.slice(1)}
+          </p>
           <div className="sub-detail">
-            <p>{song.artist}</p>
-            <p>{song.released}</p>
+            <p>
+              Artist:{" "}
+              {song.artist.charAt(0).toUpperCase() + song.artist.slice(1)}
+            </p>
+            <p>Released Year: {song.released}</p>
           </div>
         </div>
         <div className="ml-auto list-button">

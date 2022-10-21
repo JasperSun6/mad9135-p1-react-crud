@@ -1,3 +1,11 @@
 .form{
     margin-top: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.formBtn{
+    display: flex;
+    gap: 0.75rem;
 }

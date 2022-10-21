@@ -31,12 +31,11 @@ const SongForm = (props) => {
 
     if (!id) {
       addSong(newSong);
+      navigate("/");
     } else {
       editSong(updateSong);
       setEdit(false);
     }
-
-    navigate("/");
   };
 
   const onChangeName = (e) => {
@@ -83,16 +82,18 @@ const SongForm = (props) => {
             required
           ></Input>
         </FormGroup>
-        <Button type="submit">Submit</Button>
-        <Link
-          onClick={() => {
-            setEdit(false);
-          }}
-          to="/"
-          className="btn btn-danger ml-2"
-        >
-          Cancel
-        </Link>
+        <div className="formBtn">
+          <Button type="submit">Submit</Button>
+          <Link
+            onClick={() => {
+              setEdit(false);
+            }}
+            to="/"
+            className="btn btn-danger ml-2"
+          >
+            Cancel
+          </Link>
+        </div>
       </Form>
     </Container>
   );
