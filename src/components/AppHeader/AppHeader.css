@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.kpop{
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+}
