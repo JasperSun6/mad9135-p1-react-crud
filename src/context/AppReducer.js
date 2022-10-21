@@ -8,7 +8,6 @@ function AppReducer(state, action) {
 
     case "editSong":
       const updateSong = action.payload;
-      console.log(updateSong);
       const updateSongs = state.songs.map((song) => {
         if (song.id === updateSong.id) {
           return updateSong;

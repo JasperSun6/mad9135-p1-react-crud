@@ -11,7 +11,7 @@ const SongItem = ({ song }) => {
   return (
     <Container>
       <div style={edit ? { display: "block" } : { display: "none" }}>
-        <SongForm setEdit={setEdit} id={song.id} key={song.id} />
+        <SongForm song={song} setEdit={setEdit} id={song.id} key={song.id} />
       </div>
       <div style={edit ? { display: "none" } : { display: "block" }}>
         <ListGroupItem className="list" key={song.id}>

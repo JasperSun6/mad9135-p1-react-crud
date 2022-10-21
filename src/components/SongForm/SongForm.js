@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "../../context/GlobalState";
 import { v4 as uuid } from "uuid";
 import { Link } from "react-router-dom";
@@ -7,12 +7,20 @@ import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
 const SongForm = (props) => {
-  const { id, setEdit } = props;
+  const { id, setEdit, song } = props;
   const [name, setName] = useState("");
   const [artist, setArtist] = useState("");
   const [released, setReleased] = useState("");
   const { addSong, editSong } = useGlobalContext();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (id) {
+      setName(song.name);
+      setArtist(song.artist);
+      setReleased(song.released);
+    }
+  }, [id, song]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +30,7 @@ const SongForm = (props) => {
       artist,
       released,
     };
+
     const updateSong = {
       id,
       name,
