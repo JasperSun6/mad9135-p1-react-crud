@@ -95,7 +95,9 @@ const SongForm = (props) => {
           <Button type="submit">Submit</Button>
           <Link
             onClick={() => {
-              setEdit(false);
+              if (id) {
+                setEdit(false);
+              }
             }}
             to="/"
             className="btn btn-danger ml-2"
