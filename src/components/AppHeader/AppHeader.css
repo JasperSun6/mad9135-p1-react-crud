@@ -5,13 +5,17 @@
     align-items: center;
 }
 
+.navbar{
+    margin-bottom: 1.25rem;
+}
+
 .title{
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
 
-.kpop{
+.k-pop{
     max-width: 2.5rem;
     max-height: 2.5rem;
 }

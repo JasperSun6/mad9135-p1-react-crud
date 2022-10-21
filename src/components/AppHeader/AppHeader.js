@@ -10,7 +10,7 @@ const AppHeader = () => {
       <Container className="header">
         <div className="title">
           <NavbarBrand href="/">
-            <img src={icon} alt="kpop" className="kpop" />
+            <img src={icon} alt="k-pop" className="k-pop" />
           </NavbarBrand>
           <NavbarBrand>K-Pop On!</NavbarBrand>
         </div>
