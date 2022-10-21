@@ -42,7 +42,8 @@ const GlobalProvider = ({ children }) => {
 
   useEffect(() => {
     setList(state.songs);
-  }, [state]);
+  });
+
   return (
     <>
       <GlobalContext.Provider

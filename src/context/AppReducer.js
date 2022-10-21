@@ -1,7 +1,6 @@
 function AppReducer(state, action) {
   switch (action.type) {
     case "addSong":
-      console.log(action.payload);
       return {
         ...state,
         songs: [action.payload, ...state.songs],
@@ -24,7 +23,10 @@ function AppReducer(state, action) {
       return {
         ...state,
         songs: state.songs.filter((song) => {
-          if (song.id !== action.payload) return song;
+          if (song.id !== action.payload) {
+            return song;
+          }
+          return false;
         }),
       };
 
